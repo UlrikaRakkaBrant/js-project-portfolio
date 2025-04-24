@@ -1,8 +1,30 @@
-export const App = () => {
+import React from 'react';
+import GlobalStyle from './styles/GlobalStyles.jsx';
+import { ThemeProvider } from 'styled-components';
+import { theme } from './styles/theme.jsx';
+import Header from './components/Header.jsx';
+import Hero from './components/Hero.jsx';
+import About from './components/About.jsx';
+import Tech from './components/Tech.jsx';
+import Projects from './components/Projects/Projects.jsx';
+import Skills from './components/Skills.jsx';
+import Articles from './components/Articles.jsx';
+import Contact from './components/Contact.jsx';
+
+function App() {
   return (
-    <>
-      <h1>Portfolio</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem, laborum! Maxime animi nostrum facilis distinctio neque labore consectetur beatae eum ipsum excepturi voluptatum, dicta repellendus incidunt fugiat, consequatur rem aperiam.</p>
-    </>
-  )
+    <ThemeProvider theme={theme}>
+      <GlobalStyle />
+      <Header />
+      <Hero />
+      <About />
+      <Tech />
+      <Projects />
+      <Skills />
+      <Articles />
+      <Contact />
+    </ThemeProvider>
+  );
 }
+
+export default App;
