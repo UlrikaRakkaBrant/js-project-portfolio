@@ -9,3 +9,13 @@ export const theme = {
     desktop: "1024px",
   },
 };
+
+// theme.js
+export default {
+  colors: {
+    tagBg: '#e0e0e0white',
+    tagText: '#333',
+    /* …other colors… */
+  },
+  /* …breakpoints, etc… */
+}

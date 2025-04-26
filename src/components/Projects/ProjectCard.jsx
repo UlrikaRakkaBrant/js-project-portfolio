@@ -1,37 +1,64 @@
+// file: src/components/Projects/ProjectCard.jsx
+
 import React from 'react';
 import styled from 'styled-components';
-import ProjectImage from './ProjectImage.jsx';
-import TechTags from './TechTags.jsx';
-import ProjectButtons from './ProjectButtons.jsx';
+import TechTags from './TechTags'
+import ProjectButtons from './ProjectButtons';
 
-const Card = styled.div`
-  background-color: ${({ theme }) => theme.colors.secondary};
-  padding: 1.5rem;
-  border-radius: 12px;
+const CardContainer = styled.div`
+  /* always stack image over content on mobile & tablet */
   display: flex;
   flex-direction: column;
+  gap: 1.5rem;
+  background: ${({ theme }) => theme.colors.cardBg};
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0 auto; /* centers within its parent */
+
+  img {
+    width: 100%;
+    border-radius: 8px;
+  }
+
+  /* on desktop, switch to row or row-reverse inside each card */
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    flex-direction: ${({ reverse }) => (reverse ? 'row-reverse' : 'row')};
+    align-items: center;
+
+    img {
+      width: 50%;       /* half the card width */
+      max-width: 560px; /* adjust if needed */
+    }
+  }
 `;
 
-const Title = styled.h3`
-  font-size: 1rem;
-  margin: 1rem 0 0.5rem;
+const Content = styled.div`
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 `;
 
-const Description = styled.p`
-  font-size: 0.9rem;
-  margin-bottom: 1rem;
+const TechList = styled.div`
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  span { /* ... */ }
 `;
 
-const ProjectCard = ({ title, tech, description, image, live, code }) => {
-  return (
-    <Card>
-      <ProjectImage src={image} alt={title} />
+const Title = styled.h3` /* ... */ `;
+const Description = styled.p` /* ... */ `;
+
+const ProjectCard = ({ title, description, tech, image, live, code, reverse }) => (
+  <CardContainer reverse={reverse}>
+    <img src={image} alt={`Screenshot of ${title}`} />
+    <Content>
       <TechTags tags={tech} />
       <Title>{title}</Title>
       <Description>{description}</Description>
       <ProjectButtons live={live} code={code} />
-    </Card>
-  );
-};
+    </Content>
+  </CardContainer>
+);
 
 export default ProjectCard;

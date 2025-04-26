@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import heroImage from '../assets/ulrika.jpg'; // Replace with your actual image path
+import heroImage from '../assets/ulrika.jpg';
 
 const HeroWrapper = styled.section`
   width: 100%;
