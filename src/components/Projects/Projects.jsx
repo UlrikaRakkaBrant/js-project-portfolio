@@ -34,7 +34,7 @@ const projects = [
     tech: ["HTML5", "CSS3", "React", "Node"],
     description: "This Portfolio.",
     image: "https://via.placeholder.com/300x200",
-    live: "https://netlify.com/accessibility-quiz",
+    live: "deft-yeot-eca07c.netlify.app",
     code: "https://github.com/UlrikaRakkaBrant/js-project-accessibility",
   },
   {
@@ -42,7 +42,7 @@ const projects = [
     tech: ["HTML5", "CSS3", "React", "Node"],
     description: "A conversational quiz focused on accessibility best practices.",
     image: "https://via.placeholder.com/300x200",
-    live: "https://netlify.com/accessibility-quiz",
+    live: "https://neon-moxie-2182dc.netlify.app/",
     code: "https://github.com/UlrikaRakkaBrant/js-project-accessibility",
   },
   {
@@ -50,7 +50,7 @@ const projects = [
     tech: ["HTML5", "CSS3", "React", "Node"],
     description: "A weather app using real-time API data with a simple, accessible UI.",
     image: "https://via.placeholder.com/300x200",
-    live: "https://your-weather-app.netlify.app",
+    live: "astonishing-pony-2897f0.netlify.app",
     code: "https://github.com/MalLunBar/js-project-weather-app"
   },
   {
@@ -58,7 +58,7 @@ const projects = [
     tech: ["HTML5", "CSS3", "React"],
     description: "An accessible recipe app with filters, animations, and responsive design.",
     image: "https://via.placeholder.com/300x200",
-    live: "https://your-recipe-page.netlify.app",
+    live: "https://polite-gelato-07bc5e.netlify.app/",
     code: "https://github.com/UlrikaRakkaBrant/js-project-recipe-library"
   },
   {
