@@ -4,6 +4,7 @@ import styled from "styled-components";
 const HeaderWrapper = styled.header`
   padding: 2rem 1rem;
   background-color: ${({ theme }) => theme.colors.secondary};
+  text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 3rem 2rem;
@@ -51,7 +52,6 @@ const Header = () => {
     <HeaderWrapper>
       <Greeting>Hi there, I’m</Greeting>
       <Name>Ulrika Einebrant</Name>
-      <Title>Creative Developer with a background in project managing and theatre.</Title>
     </HeaderWrapper>
   );
 };

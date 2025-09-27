@@ -13,9 +13,10 @@ const HeroImage = styled.img`
   max-height: 600px;
   object-fit: cover;
   display: block;
+  margin-inline: auto;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    max-height: 800px;
+    width: 10rem;
   }
 `;
 

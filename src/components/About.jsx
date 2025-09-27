@@ -6,10 +6,11 @@ const AboutWrapper = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     padding: 4rem 2rem;
+    text-align: center;
+
   }
 `;
 
