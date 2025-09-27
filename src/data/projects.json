@@ -1,28 +1,68 @@
 {
   "projects": [
     {
-      "name": "Business site",
-      "image": "https://images.unsplash.com/photo-1557008075-7f2c5efa4cfd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2497&q=80",
+      "name": "Portfolio",
+      "description": "This Portfolio.",
+      "image": "https://via.placeholder.com/300x200",
       "tags": [
         "HTML5",
         "CSS3",
-        "JavaScript"
+        "React",
+        "Node"
       ],
-      "netlify": "link",
-      "github": "link"
+      "netlify": "https://deft-yeot-eca07c.netlify.app",
+      "github": "https://github.com/UlrikaRakkaBrant/js-project-accessibility"
     },
     {
-      "name": "Weather app",
-      "image": "https://images.unsplash.com/photo-1520792532857-293bd046307a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2370&q=80",
+      "name": "Accessibility Quiz",
+      "description": "A conversational quiz focused on accessibility best practices.",
+      "image": "https://via.placeholder.com/300x200",
       "tags": [
         "HTML5",
         "CSS3",
-        "JavaScript",
-        "TypeScript",
-        "APIs"
+        "React",
+        "Node"
       ],
-      "netlify": "link",
-      "github": "link"
+      "netlify": "https://neon-moxie-2182dc.netlify.app/",
+      "github": "https://github.com/UlrikaRakkaBrant/js-project-accessibility"
+    },
+    {
+      "name": "Weather App",
+      "description": "A weather app using real-time API data with a simple, accessible UI.",
+      "image": "https://via.placeholder.com/300x200",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "React",
+        "Node"
+      ],
+      "netlify": "https://astonishing-pony-2897f0.netlify.app",
+      "github": "https://github.com/MalLunBar/js-project-weather-app"
+    },
+    {
+      "name": "Recipe Page",
+      "description": "An accessible recipe app with filters, animations, and responsive design.",
+      "image": "https://via.placeholder.com/300x200",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "React"
+      ],
+      "netlify": "https://polite-gelato-07bc5e.netlify.app/",
+      "github": "https://github.com/UlrikaRakkaBrant/js-project-recipe-library"
+    },
+    {
+      "name": "E-Commerce Demo",
+      "description": "A mock e-commerce app with product cards and form for contact.",
+      "image": "https://via.placeholder.com/300x200",
+      "tags": [
+        "HTML5",
+        "CSS3",
+        "React",
+        "Node"
+      ],
+      "netlify": "https://your-ecommerce-demo.netlify.app",
+      "github": "https://github.com/UlrikaRakkaBrant/js-project-business-site"
     }
   ]
 }
