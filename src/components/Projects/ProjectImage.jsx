@@ -9,6 +9,8 @@ const Image = styled.img`
   display: block;
   margin: 0 auto;
 
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.19); /*depth*/
+
  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 696px;
     height: 479px;
