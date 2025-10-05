@@ -2,10 +2,22 @@ import React from 'react';
 import styled from 'styled-components';
 
 const Image = styled.img`
-  width: 100%;
-  border-radius: 8px;
+  width: 343px;
+  height: 479px;
+  border-radius: 12px;
   object-fit: cover;
-  height: 160px;
+  display: block;
+  margin: 0 auto;
+
+ @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 696px;
+    height: 479px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 479px;
+    height: 479px;
+  }
 `;
 
 const ProjectImage = ({ src, alt }) => (

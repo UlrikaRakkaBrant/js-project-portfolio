@@ -4,6 +4,7 @@ import React from 'react';
 import styled from 'styled-components';
 import TechTags from './TechTags'
 import ProjectButtons from './ProjectButtons';
+import ProjectImage from './ProjectImage';
 
 const CardContainer = styled.div`
   /* always stack image over content on mobile & tablet */
@@ -51,7 +52,7 @@ const Description = styled.p` /* ... */ `;
 
 const ProjectCard = ({ title, description, tech, image, live, code, reverse }) => (
   <CardContainer reverse={reverse}>
-    <img src={image} alt={`Screenshot of ${title}`} />
+    <ProjectImage src={image} alt={`Screenshot of ${title}`} />
     <Content>
       <TechTags tags={tech} />
       <Title>{title}</Title>
