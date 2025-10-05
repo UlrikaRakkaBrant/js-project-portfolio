@@ -1,0 +1,28 @@
+{
+  "articles": [
+    {
+      "title": "How to stop being scared: Learning to love code",
+      "date": "2025-07-14",
+      "excerpt": "Practical ways to turn fear into curiosity and momentum.",
+      "url": "https://example.com/learn-to-love-code",
+      "image": "/articles/first.jpg",
+      "imageAlt": "Notebook with code snippets and a coffee mug"
+    },
+    {
+      "title": "Translating Figma intent into robust components",
+      "date": "2025-07-14",
+      "excerpt": "Spacing, rhythm, and hierarchy that survive real data.",
+      "url": "https://example.com/figma-intent",
+      "image": "/articles/second.jpg",
+      "imageAlt": "Figma canvas with component variants"
+    },
+    {
+      "title": "Cheap wins for React performance",
+      "date": "2025-07-14",
+      "excerpt": "Memoization, keys, and render tree decisions that matter.",
+      "url": "https://example.com/react-cheap-wins",
+      "image": "/articles/third.jpg",
+      "imageAlt": "Code editor view with highlighted React code"
+    }
+  ]
+}
