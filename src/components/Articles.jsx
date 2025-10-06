@@ -45,14 +45,21 @@ const Card = styled.article`
 `;
 
 const Thumb = styled.img`
-  width: 100%;
-  height: 200px;              /* mobile image height */
+  width: 327px;
+  height: 200px;
+  border-radius: 12px;
   object-fit: cover;
   display: block;
+  margin: 0 auto;
 
-  /* Tablet/Desktop can keep similar height; tweak if Figma uses taller images */
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    height: 220px;
+   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    width: 200px;
+    height: 338px;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+    width: 479px;
+    height: 311px;
   }
 `;
 
