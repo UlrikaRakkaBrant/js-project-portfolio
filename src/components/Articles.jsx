@@ -28,10 +28,8 @@ const List = styled.div`
 const Card = styled.article`
   background: ${({ theme }) => theme.colors.secondary};
   color: ${({ theme }) => theme.colors.primary};
-  border: 1px solid rgba(0,0,0,0.1);
   border-radius: 12px;
   overflow: hidden; /* ensure image corners clip to 12px */
-  box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
   justify-content: center;
