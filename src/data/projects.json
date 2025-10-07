@@ -3,7 +3,7 @@
     {
       "name": "Portfolio",
       "description": "This Portfolio.",
-      "image": "https://via.placeholder.com/300x200",
+      "image": "/projects/portfolio.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -16,7 +16,7 @@
     {
       "name": "Accessibility Quiz",
       "description": "A conversational quiz focused on accessibility best practices.",
-      "image": "https://via.placeholder.com/300x200",
+      "image": "/projects/accessibility-quiz.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -29,7 +29,7 @@
     {
       "name": "Weather App",
       "description": "A weather app using real-time API data with a simple, accessible UI.",
-      "image": "https://via.placeholder.com/300x200",
+      "image": "/projects/weather-app.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -42,7 +42,7 @@
     {
       "name": "Recipe Page",
       "description": "An accessible recipe app with filters, animations, and responsive design.",
-      "image": "https://via.placeholder.com/300x200",
+      "image": "/projects/recipe-app.jpg",
       "tags": [
         "HTML5",
         "CSS3",
@@ -54,14 +54,14 @@
     {
       "name": "E-Commerce Demo",
       "description": "A mock e-commerce app with product cards and form for contact.",
-      "image": "https://via.placeholder.com/300x200",
+      "image": "/projects/ecommerce-demo.jpg",
       "tags": [
         "HTML5",
         "CSS3",
         "React",
         "Node"
       ],
-      "netlify": "https://your-ecommerce-demo.netlify.app",
+      "netlify": "https://glittery-queijadas-170433.netlify.app/",
       "github": "https://github.com/UlrikaRakkaBrant/js-project-business-site"
     }
   ]

@@ -18,19 +18,11 @@ const SectionTitle = styled.h2`
 `;
 
 const List = styled.div`
-  display: grid;
-  grid-template-columns: 1fr;   /* mobile: single column */
+  display: flex;
+  flex-direction: column;
   gap: 1rem;
+  align-items: center;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    grid-template-columns: 1fr 1fr;  /* tablet: two columns */
-    gap: 1.25rem;
-  }
-
-  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
-    grid-template-columns: 1fr 1fr;  /* keep 2 cols for clarity */
-    gap: 1.5rem;
-  }
 `;
 
 const Card = styled.article`
@@ -42,15 +34,27 @@ const Card = styled.article`
   box-shadow: 0 2px 8px rgba(0,0,0,0.03);
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+  
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  flex-direction: row;
+  width: 42rem;
+  }
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
+  width: 54rem;
+  gap: 3rem;
+  }
 `;
 
 const Thumb = styled.img`
-  width: 327px;
-  height: 200px;
+  width: 100%;
+  aspect-ratio: 16 / 9;
   border-radius: 12px;
   object-fit: cover;
   display: block;
-  margin: 0 auto;
 
    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 200px;
