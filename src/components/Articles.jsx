@@ -72,8 +72,18 @@ const Body = styled.div`
 `;
 
 const Meta = styled.time`
+  display: inline-block;
   font-size: 0.875rem;
-  color: #666;
+  color: #000; /* or #666 if you prefer softer text */
+  border: 1px solid rgba(0, 0, 0, 0.2); /* thin subtle frame */
+  border-radius: 6px; /* slightly rounded corners */
+  padding: 0.25rem 0.5rem; /* space inside the frame */
+  align-self: flex-start; /* keeps the tag aligned left */
+  background-color: ${({ theme }) => theme.colors.secondary}; /* ensures good contrast */
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    font-size: 0.9rem;
+  }
 `;
 
 const Title = styled.h3`
