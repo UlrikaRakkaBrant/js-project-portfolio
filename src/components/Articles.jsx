@@ -126,20 +126,28 @@ const Excerpt = styled.p`
 `;
 
 const ReadLink = styled.a`
-  margin-top: 0.25rem;
-  align-self: start;
+  display: inline-flex;                 /* center the text vertically */
+  align-items: center;
+  justify-content: center;
 
-  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    align-self: end;     /* pin to bottom of the Body grid */
-    justify-self: start; /* left aligned horizontally */
-  }
+  width: 303px;
+  height: 48px;
 
-  display: inline-block;
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
+  border-radius: 12px;                 /* ← updated to match your Figma */
   background: ${({ theme }) => theme.colors.primary};
   color: #fff;
+  font-size: 1rem;
+  font-weight: 500;
   text-decoration: none;
+  cursor: pointer;
+
+  /* spacing */
+  margin-top: 0.25rem;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    align-self: end;     /* bottom align inside grid */
+    justify-self: start; /* left align horizontally */
+  }
 
   &:hover {
     opacity: 0.9;
@@ -150,6 +158,8 @@ const ReadLink = styled.a`
     outline-offset: 2px;
   }
 `;
+
+
 
 const formatDateWithOrdinal = (iso) => {
   // e.g., "July 14th"
