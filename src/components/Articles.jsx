@@ -21,8 +21,9 @@ const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  align-items: center;
-
+  // align-items: center;
+/* let cards stretch full width on mobile */
+  align-items: stretch;
 `;
 
 const Card = styled.article`
@@ -34,8 +35,9 @@ const Card = styled.article`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
+  /* optional: match internal spacing uniformly */
+  padding-right: 1rem;
   
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   flex-direction: row;
   width: 42rem;
@@ -48,15 +50,19 @@ const Card = styled.article`
 `;
 
 const Thumb = styled.img`
-  width: 100%;
-  aspect-ratio: 16 / 9;
+  // width: 100%;
+  // aspect-ratio: 16 / 9;
+  with: 327px;
+  height: 200px;
   border-radius: 12px;
   object-fit: cover;
   display: block;
+  margin-left: 1rem; /* align with Body padding on mobile */
 
    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 200px;
     height: 338px;
+    margin-left: 0;   /* reset on larger screens */
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
