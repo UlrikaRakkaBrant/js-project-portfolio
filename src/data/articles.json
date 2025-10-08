@@ -1,12 +1,12 @@
 {
   "articles": [
     {
-      "title": "How to stop being scared: Learning to love code",
+      "title": "Designing for Accessibility: Small Wins that Matter",
       "date": "2025-07-14",
-      "excerpt": "Practical ways to turn fear into curiosity and momentum.",
-      "url": "https://example.com/learn-to-love-code",
+      "excerpt": "Practical, quick changes that improve access for keyboard and screen reader users.Practical, quick changes that improve access for keyboard and screen reader users.Practical, quick changes that improve access for keyboard and screen reader users.Practical, quick changes that improve access for keyboard and screen reader users.Practical, quick changes that improve access for keyboard and screen reader users.Practical, quick changes that improve access for keyboard and screen reader users.",
+      "url": "https://medium.com/@einebrantaren/designing-for-accessibility-small-wins-that-matter-b16a1f89d2b5",
       "image": "/articles/first.jpg",
-      "imageAlt": "Notebook with code snippets and a coffee mug"
+      "imageAlt": "Scramble letters forming the word online. Photo: Markus Winkler"
     },
     {
       "title": "Translating Figma intent into robust components",
