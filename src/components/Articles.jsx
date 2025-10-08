@@ -90,20 +90,28 @@ const Body = styled.div`
 `;
 
 const Meta = styled.time`
-  display: inline-block;
+  display: inline-flex;                  /* lets us control height cleanly */
+  align-items: center;                   /* vertical centering of text */
+  justify-content: center;
   font-size: 0.875rem;
-  color: #000;             /* or #666 if you prefer softer text */
-  border: 1px solid rgba(0, 0, 0, 0.2); /* thin subtle frame */
-  border-radius: 6px;        /* slightly rounded corners */
-  padding: 0.25rem 0.5rem;   /* space inside the frame */
-  align-self: flex-start;    /* keeps the tag aligned left */
-  background-color: ${({ theme }) => theme.colors.secondary}; /* ensures good contrast */
-  margin: 0;                 /* align perfectly with top */
+  line-height: 1;                        /* keeps text vertically balanced */
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  border-radius: 6px;
+  background-color: ${({ theme }) => theme.colors.secondary};
+
+  /* Figma: Hug (142×28) */
+  height: 28px;                          /* fixed height per design */
+  padding: 0 0.75rem;                    /* gives space left/right */
+  width: fit-content;                    /* "hug" content horizontally */
+  min-width: 142px;                      /* ensures minimum 142px total width */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 0.9rem;
   }
 `;
+
+
 
 const Title = styled.h3`
   font-size: 1.125rem;
