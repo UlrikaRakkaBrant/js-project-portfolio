@@ -21,9 +21,10 @@ const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-/* align-items: center; */
-/* let cards stretch full width on mobile */
-  align-items: stretch;
+  align-items: stretch; /* let cards stretch full width on mobile */
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+   align-items: center;  /* center the fixed-width cards (42/54rem) */
 `;
 
 const Card = styled.article`
@@ -42,11 +43,12 @@ const Card = styled.article`
   flex-direction: row;
   width: 42rem;
   align-items: stretch; /* makes Body match Thumb height */
+  column-gap: 1 rem; /* only horizontal spacing beween image and body */
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
   width: 54rem;
-  gap: 3rem;
+  column-gap: 3rem; /* wider horizontal gutter on desktop */
   }
 `;
 
