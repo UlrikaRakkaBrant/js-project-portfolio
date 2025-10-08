@@ -2,6 +2,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import articleData from '../data/articles.json';
+import { IoIosGlobe } from 'react-icons/io';
 
 const Wrapper = styled.section`
   padding: 2rem 1rem;
@@ -111,8 +112,6 @@ const Meta = styled.time`
   }
 `;
 
-
-
 const Title = styled.h3`
   font-size: 1.125rem;
   line-height: 1.3;
@@ -126,14 +125,14 @@ const Excerpt = styled.p`
 `;
 
 const ReadLink = styled.a`
-  display: inline-flex;                 /* center the text vertically */
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
-
+  justify-content: flex-start;
+  padding: 0 16px;   /* top/bottom = 0, left/right = 16px */
+  gap: 16px;                /* ← from Figma Auto layout gap */
   width: 303px;
   height: 48px;
-
-  border-radius: 12px;                 /* ← updated to match your Figma */
+  border-radius: 12px;
   background: ${({ theme }) => theme.colors.primary};
   color: #fff;
   font-size: 1rem;
@@ -141,25 +140,17 @@ const ReadLink = styled.a`
   text-decoration: none;
   cursor: pointer;
 
-  /* spacing */
-  margin-top: 0.25rem;
-
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-    align-self: end;     /* bottom align inside grid */
-    justify-self: start; /* left align horizontally */
+    align-self: end;
+    justify-self: start;
   }
 
-  &:hover {
-    opacity: 0.9;
-  }
-
+  &:hover { opacity: 0.9; }
   &:focus-visible {
     outline: 2px solid currentColor;
     outline-offset: 2px;
   }
 `;
-
-
 
 const formatDateWithOrdinal = (iso) => {
   // e.g., "July 14th"
@@ -196,6 +187,7 @@ const Articles = () => {
                 rel="noopener noreferrer"
                 aria-label={`Read article: ${a.title}`}
               >
+                <IoIosGlobe size={30.99} color="#FFFFFF" style={{ marginRight: '0.5rem' }} />
                 Read article
               </ReadLink>
             </Body>
