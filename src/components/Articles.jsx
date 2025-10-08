@@ -41,6 +41,7 @@ const Card = styled.article`
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   flex-direction: row;
   width: 42rem;
+  align-items: stretch; /* makes Body match Thumb height */
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -73,8 +74,13 @@ const Thumb = styled.img`
 
 const Body = styled.div`
   padding: 1rem;
-  display: grid;
+  // display: grid;
+  // gap: 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; /* vertically center text */
   gap: 0.5rem;
+  flex: 1; /* fills height to match the Thumb */
 `;
 
 const Meta = styled.time`
