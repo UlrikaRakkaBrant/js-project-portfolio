@@ -21,7 +21,7 @@ const List = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  // align-items: center;
+/* align-items: center; */
 /* let cards stretch full width on mobile */
   align-items: stretch;
 `;
@@ -51,14 +51,13 @@ const Card = styled.article`
 `;
 
 const Thumb = styled.img`
-  // width: 100%;
-  // aspect-ratio: 16 / 9;
-  with: 327px;
+  width: 327px;
   height: 200px;
   border-radius: 12px;
   object-fit: cover;
   display: block;
   margin-left: 1rem; /* align with Body padding on mobile */
+  flex-shrink: 0;    /* don’t let the image shrink in row layout */
 
    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     width: 200px;
@@ -73,25 +72,31 @@ const Thumb = styled.img`
 `;
 
 const Body = styled.div`
-  padding: 1rem;
-  // display: grid;
-  // gap: 0.5rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center; /* vertically center text */
+  display: grid;
   gap: 0.5rem;
-  flex: 1; /* fills height to match the Thumb */
+  flex: 1;        /* take remaining width in row layout */
+  min-width: 0;   /* allow text to wrap */
+
+                  /* On tablet/desktop, force top→bottom distribution:
+                    row1: date (auto)
+                    row2: title+excerpt (1fr, flexible)
+                    row3: button (auto) */
+@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+  grid-template-rows: auto 1fr auto;
+  align-content: stretch;
+}
 `;
 
 const Meta = styled.time`
   display: inline-block;
   font-size: 0.875rem;
-  color: #000; /* or #666 if you prefer softer text */
+  color: #000;             /* or #666 if you prefer softer text */
   border: 1px solid rgba(0, 0, 0, 0.2); /* thin subtle frame */
-  border-radius: 6px; /* slightly rounded corners */
-  padding: 0.25rem 0.5rem; /* space inside the frame */
-  align-self: flex-start; /* keeps the tag aligned left */
+  border-radius: 6px;        /* slightly rounded corners */
+  padding: 0.25rem 0.5rem;   /* space inside the frame */
+  align-self: flex-start;    /* keeps the tag aligned left */
   background-color: ${({ theme }) => theme.colors.secondary}; /* ensures good contrast */
+  margin: 0;                 /* align perfectly with top */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
     font-size: 0.9rem;
@@ -101,16 +106,24 @@ const Meta = styled.time`
 const Title = styled.h3`
   font-size: 1.125rem;
   line-height: 1.3;
+  margin: 0;
 `;
 
 const Excerpt = styled.p`
   font-size: 0.95rem;
   line-height: 1.6;
+  margin: 0;
 `;
 
 const ReadLink = styled.a`
   margin-top: 0.25rem;
   align-self: start;
+
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    align-self: end;     /* pin to bottom of the Body grid */
+    justify-self: start; /* left aligned horizontally */
+  }
+
   display: inline-block;
   padding: 0.5rem 0.75rem;
   border-radius: 6px;
@@ -118,8 +131,14 @@ const ReadLink = styled.a`
   color: #fff;
   text-decoration: none;
 
-  &:hover { opacity: 0.9; }
-  &:focus-visible { outline: 2px solid currentColor; outline-offset: 2px; }
+  &:hover {
+    opacity: 0.9;
+  }
+
+  &:focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
 `;
 
 const formatDateWithOrdinal = (iso) => {
