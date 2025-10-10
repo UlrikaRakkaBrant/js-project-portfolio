@@ -21,11 +21,12 @@ const SectionTitle = styled.h2`
 const List = styled.div`
   display: flex;
   flex-direction: column;
-  gap: 1rem;
+  gap: 1.5rem;
   align-items: stretch; /* let cards stretch full width on mobile */
 
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
    align-items: center;  /* center the fixed-width cards (42/54rem) */
+  }
 `;
 
 const Card = styled.article`
@@ -37,14 +38,13 @@ const Card = styled.article`
   flex-direction: column;
   justify-content: center;
   gap: 1rem;
-  /* optional: match internal spacing uniformly */
-  padding-right: 1rem;
+  padding: 0 1rem 1rem;
   
   @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
   flex-direction: row;
   width: 42rem;
   align-items: stretch; /* makes Body match Thumb height */
-  column-gap: 1 rem; /* only horizontal spacing beween image and body */
+  column-gap: 1rem; /* only horizontal spacing beween image and body */
   }
 
   @media (min-width: ${({ theme }) => theme.breakpoints.desktop}) {
@@ -59,7 +59,7 @@ const Thumb = styled.img`
   border-radius: 12px;
   object-fit: cover;
   display: block;
-  margin-left: 1rem; /* align with Body padding on mobile */
+  margin-left: 0;
   flex-shrink: 0;    /* don’t let the image shrink in row layout */
 
    @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
@@ -76,19 +76,16 @@ const Thumb = styled.img`
 
 const Body = styled.div`
   display: grid;
-  gap: 0.5rem;
-  flex: 1;        /* take remaining width in row layout */
-  min-width: 0;   /* allow text to wrap */
+  gap: 1rem;  /* base vertical rhythm: 16px */
+  flex: 1;
+  min-width: 0;
 
-                  /* On tablet/desktop, force top→bottom distribution:
-                    row1: date (auto)
-                    row2: title+excerpt (1fr, flexible)
-                    row3: button (auto) */
-@media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
-  grid-template-rows: auto 1fr auto;
-  align-content: stretch;
-}
+  @media (min-width: ${({ theme }) => theme.breakpoints.tablet}) {
+    grid-template-rows: auto auto 1fr auto;
+    gap: 1.25rem; /* slightly more on larger screens */
+  }
 `;
+
 
 const Meta = styled.time`
   display: inline-flex;                  /* lets us control height cleanly */
@@ -187,7 +184,7 @@ const Articles = () => {
                 rel="noopener noreferrer"
                 aria-label={`Read article: ${a.title}`}
               >
-                <IoIosGlobe size={30.99} color="#FFFFFF" style={{ marginRight: '0.5rem' }} />
+                <IoIosGlobe size={30.99} color="#FFFFFF" />
                 Read article
               </ReadLink>
             </Body>
