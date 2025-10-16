@@ -4,7 +4,7 @@ import styled from "styled-components";
 import ulrika from "../assets/ulrika.jpg";
 import iconLinkedIn from "../assets/Btn - linkedin.svg";
 import iconGithub from "../assets/github-icon.svg";
-import kompanierror from "../assets/link-icon.svg";
+import kompanierror from "../assets/kompani-error.png";
 
 const Section = styled.section`
   background: ${({ theme }) => theme.colors.primary};   /* black */
