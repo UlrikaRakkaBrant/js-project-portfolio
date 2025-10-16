@@ -1,7 +1,7 @@
 {
   "projects": [
     {
-      "name": "Portfolio",
+      "name": "Ulrikas Portfolio",
       "description": "This Portfolio.",
       "image": "/projects/portfolio.jpg",
       "tags": [
@@ -10,7 +10,7 @@
         "React",
         "Node"
       ],
-      "netlify": "https://deft-yeot-eca07c.netlify.app",
+      "netlify": "https://ulrikasportfolio.netlify.app/",
       "github": "https://github.com/UlrikaRakkaBrant/js-project-accessibility"
     },
     {
